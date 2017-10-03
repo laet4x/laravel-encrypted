@@ -20,16 +20,17 @@
 7.  Create database name `encryption`
 8.  In project directory rename .env.example into .env and change these line
  	
- 	DB_DATABASE=encryption
+ 	`DB_DATABASE=encryption
 	DB_USERNAME=root
-	DB_PASSWORD=root	
+	DB_PASSWORD=root`
+		
 9. Run `docker exec -ti encryption /bin/bash`
 10. goto `/etc/apache2/sites-available`
 11. Modify `000-default.conf`
 12. Update using these config
 	                       
 
-	#<VirtualHost *:80>
+	`#<VirtualHost *:80>
 	        # The ServerName directive sets the request scheme, hostname and port t$
 	        # the server uses to identify itself. This is used when creating
 	        # redirection URLs. In the context of virtual hosts, the ServerName
@@ -71,7 +72,8 @@
 	Allow from all
 	 </Directory> ErrorLog "/var/log/apache2/encryption-error_log"
 	 CustomLog "/var/log/apache2/encryption--access_log" common
-	 </VirtualHost>
+	 </VirtualHost>`
+
 13. restart apache `services apache2 restart`
 14. inside docker containter goto to `/var/www/app` and run the following
 	a. `chmod -R 7777 bootstrap storage public`	
