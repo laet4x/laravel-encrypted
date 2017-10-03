@@ -14,9 +14,9 @@
 
 	change the `<project directory on host machine>` into the directory of your project
 5. 	Now visit to `http://localhost:8000/` the default apache2 index will shown.
-6.  Visit to http://localhost:8000/phpmyadmin
-	usename: root
-	password: root
+6.  Visit to http://localhost:8000/phpmyadmin <br>
+	usename: root <br>
+	password: root <br>
 7.  Create database name `encryption`
 8.  In project directory rename .env.example into .env and change these line
  	
