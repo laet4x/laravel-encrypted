@@ -15,14 +15,14 @@
 	change the `<project directory on host machine>` into the directory of your project
 5. 	Now visit to `http://localhost:8000/` the default apache2 index will shown.
 6.  Visit to http://localhost:8000/phpmyadmin <br>
-	usename: root <br>
-	password: root <br>
+	`usename: root` <br>
+	`password: root` <br>
 7.  Create database name `encryption`
-8.  In project directory rename .env.example into .env and change these line
+8.  In project directory rename .env.example into .env and change these line<br>
  	
- 	`DB_DATABASE=encryption
-	DB_USERNAME=root
-	DB_PASSWORD=root`
+ 	`DB_DATABASE=encryption` <br>
+	`DB_USERNAME=root` <br>
+	`DB_PASSWORD=root` <br>
 
 9. Run `docker exec -ti encryption /bin/bash`
 10. goto `/etc/apache2/sites-available`
