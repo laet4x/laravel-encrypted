@@ -28,8 +28,8 @@
 10. goto `/etc/apache2/sites-available`
 11. Modify `000-default.conf`
 12. Update using these config
-	                       
-	`<VirtualHost *:80>
+	```                       
+	<VirtualHost *:80>
 		ServerAdmin webmaster@localhost
 	 	DocumentRoot "/var/www/app/public"
 		ServerName localhost
@@ -40,12 +40,14 @@
 		Allow from all
 	 	</Directory> ErrorLog "/var/log/apache2/encryption-error_log"
 	 	CustomLog "/var/log/apache2/encryption--access_log" common
-	 </VirtualHost>`
-
+	 </VirtualHost>
+	 ```
 13. restart apache `services apache2 restart`
 14. inside docker containter goto to `/var/www/app` and run the following
+	```
 	a. `chmod -R 7777 bootstrap storage public`	
 	b. `php artisan generate:key`
 	c. `php artisan migrate`
 	d. `php artisan db:seed`
+	```
 15. Gotcha!	
